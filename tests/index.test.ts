@@ -1,10 +1,10 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIPromise } from 'haye/core/api-promise';
+import { APIPromise } from 'boomerangme-api/core/api-promise';
 
 import util from 'node:util';
-import Haye from 'haye';
-import { APIUserAbortError } from 'haye';
+import Haye from 'boomerangme-api';
+import { APIUserAbortError } from 'boomerangme-api';
 const defaultFetch = fetch;
 
 describe('instantiate client', () => {

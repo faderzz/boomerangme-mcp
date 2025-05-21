@@ -2,7 +2,7 @@
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import type { Metadata } from '../../';
-import Haye from 'haye';
+import Haye from 'boomerangme-api';
 
 export const metadata: Metadata = {
   resource: 'v2.customers',

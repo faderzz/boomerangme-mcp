@@ -1,4 +1,4 @@
-import Haye from 'haye';
+import Haye from 'boomerangme-api';
 import { Endpoint } from './tools';
 import { zodToJsonSchema } from 'zod-to-json-schema';
 import { z } from 'zod';

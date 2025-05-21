@@ -7,8 +7,8 @@ const config: JestConfigWithTsJest = {
     '^.+\\.(t|j)sx?$': ['@swc/jest', { sourceMaps: 'inline' }],
   },
   moduleNameMapper: {
-    '^haye$': '<rootDir>/src/index.ts',
-    '^haye/(.*)$': '<rootDir>/src/$1',
+    '^boomerangme-api$': '<rootDir>/src/index.ts',
+    '^boomerangme-api/(.*)$': '<rootDir>/src/$1',
   },
   modulePathIgnorePatterns: [
     '<rootDir>/ecosystem-tests/',

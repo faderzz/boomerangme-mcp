@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Haye from 'haye';
+import Haye from 'boomerangme-api';
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 
 import list_operations_v2 from './v2/list-operations-v2';
