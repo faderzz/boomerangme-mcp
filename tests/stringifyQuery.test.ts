@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { Haye } from 'haye';
+import { Haye } from 'boomerangme-api';
 
 const { stringifyQuery } = Haye.prototype as any;
 

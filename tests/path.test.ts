@@ -1,4 +1,4 @@
-import { createPathTagFunction, encodeURIPath } from 'haye/internal/utils/path';
+import { createPathTagFunction, encodeURIPath } from 'boomerangme-api/internal/utils/path';
 import { inspect } from 'node:util';
 
 describe('path template tag function', () => {

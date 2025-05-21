@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "haye/*": ["dist/src/*"],
-      "haye": ["dist/src/index.ts"]
+      "boomerangme-api/*": ["dist/src/*"],
+      "boomerangme-api": ["dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,

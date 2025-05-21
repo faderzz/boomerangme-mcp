@@ -1,5 +1,5 @@
 {
-  "name": "haye",
+  "name": "boomerangme-api",
   "version": "0.0.1-alpha.0",
   "description": "The official TypeScript library for the Haye API",
   "author": "Haye <>",
@@ -50,8 +50,8 @@
     "synckit": "0.8.8"
   },
   "imports": {
-    "haye": ".",
-    "haye/*": "./src/*"
+    "boomerangme-api": ".",
+    "boomerangme-api/*": "./src/*"
   },
   "exports": {
     ".": {
