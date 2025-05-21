@@ -9,8 +9,8 @@ It is generated with [Stainless](https://www.stainless.com/).
 Because it's not published yet, clone the repo and build it:
 
 ```sh
-git clone git@github.com:stainless-sdks/haye-typescript.git
-cd haye-typescript
+git clone git@github.com:faderzz/boomerangme-mcp.git
+cd boomerangme-mcp
 ./scripts/bootstrap
 ./scripts/build
 ```
@@ -40,7 +40,7 @@ For clients with a configuration JSON, it might look something like this:
   "mcpServers": {
     "haye_api": {
       "command": "node",
-      "args": ["/path/to/local/haye-typescript/packages/mcp-server", "--client=claude", "--tools=dynamic"],
+      "args": ["/path/to/local/boomerangme-mcp/packages/mcp-server", "--client=claude", "--tools=dynamic"],
       "env": {
         "HAYE_API_KEY": "My API Key"
       }
