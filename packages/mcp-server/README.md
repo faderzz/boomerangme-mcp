@@ -216,12 +216,12 @@ The following tools are available in this MCP server.
 
 - `accrue_v2_marketplace` (`write`): Perform an accrual action on a purchase.
 
-A customer's phone number, email, or card serial number is required to find or register a loyalty card.
+  A customer's phone number, email, or card serial number is required to find or register a loyalty card.
 
 - `resolve_credentials_v2_marketplace` (`write`): Retrieve a bundle of app installation credentials using any one of them.
 
-For example, on a service webhook or at the application service level,
-you may only have the merchant ID and need to obtain the service API token.
+  For example, on a service webhook or at the application service level,
+  you may only have the merchant ID and need to obtain the service API token.
 
 - `reverse_v2_marketplace` (`write`): Revert a previously performed accrual action using the transaction ID.
 
