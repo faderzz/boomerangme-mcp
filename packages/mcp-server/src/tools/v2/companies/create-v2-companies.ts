@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.companies',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/api/v2/companies',
+  operationId: 'post_api-post-company',
 };
 
 export const tool: Tool = {

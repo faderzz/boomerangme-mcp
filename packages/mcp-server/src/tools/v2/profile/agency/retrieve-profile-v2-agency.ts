@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.profile.agency',
   operation: 'read',
   tags: [],
+  httpMethod: 'get',
+  httpPath: '/api/v2/profile/agency',
+  operationId: 'get_api-get-profile-agency',
 };
 
 export const tool: Tool = {

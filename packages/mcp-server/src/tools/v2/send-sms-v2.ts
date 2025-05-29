@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/api/v2/sms',
+  operationId: 'post_api-post-sms',
 };
 
 export const tool: Tool = {

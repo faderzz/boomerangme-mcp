@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.cards',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/api/v2/cards/{id}/subtract-point',
+  operationId: 'post_api-post-card-subtract-point',
 };
 
 export const tool: Tool = {

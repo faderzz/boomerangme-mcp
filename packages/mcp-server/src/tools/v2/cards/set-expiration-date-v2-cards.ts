@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.cards',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/api/v2/cards/{id}/set-expiration-date',
+  operationId: 'post_api-post-set-expiration-date',
 };
 
 export const tool: Tool = {
