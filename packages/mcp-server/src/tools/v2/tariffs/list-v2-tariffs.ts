@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.tariffs',
   operation: 'read',
   tags: [],
+  httpMethod: 'get',
+  httpPath: '/api/v2/tariffs',
+  operationId: 'get_api-get-tariff-list',
 };
 
 export const tool: Tool = {

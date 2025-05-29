@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.pushes',
   operation: 'read',
   tags: [],
+  httpMethod: 'get',
+  httpPath: '/api/v2/pushes',
+  operationId: 'get_api-get-push-list',
 };
 
 export const tool: Tool = {

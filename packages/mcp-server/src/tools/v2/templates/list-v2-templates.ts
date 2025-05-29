@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.templates',
   operation: 'read',
   tags: [],
+  httpMethod: 'get',
+  httpPath: '/api/v2/templates',
+  operationId: 'get_api-get-template-list',
 };
 
 export const tool: Tool = {

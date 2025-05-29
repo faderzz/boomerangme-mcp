@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.templates.reward_tiers',
   operation: 'write',
   tags: [],
+  httpMethod: 'delete',
+  httpPath: '/api/v2/templates/{templateId}/reward_tiers/{id}',
+  operationId: 'delete_api-delete-reward-tier',
 };
 
 export const tool: Tool = {

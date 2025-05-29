@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.customers',
   operation: 'write',
   tags: [],
+  httpMethod: 'delete',
+  httpPath: '/api/v2/customers/{id}',
+  operationId: 'delete_api-delete-customer',
 };
 
 export const tool: Tool = {

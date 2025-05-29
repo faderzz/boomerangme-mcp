@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.cards',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/api/v2/cards/{id}/add-visit',
+  operationId: 'post_api-post-card-add-visit',
 };
 
 export const tool: Tool = {

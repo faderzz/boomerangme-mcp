@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.pushes',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/api/v2/pushes',
+  operationId: 'post_api-post-push',
 };
 
 export const tool: Tool = {

@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.templates.reward_tiers',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/api/v2/templates/{templateId}/reward_tiers',
+  operationId: 'post_api-post-reward-tier',
 };
 
 export const tool: Tool = {

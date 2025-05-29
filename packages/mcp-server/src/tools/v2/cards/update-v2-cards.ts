@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.cards',
   operation: 'write',
   tags: [],
+  httpMethod: 'patch',
+  httpPath: '/api/v2/cards/{id}',
+  operationId: 'patch_api-patch-card',
 };
 
 export const tool: Tool = {

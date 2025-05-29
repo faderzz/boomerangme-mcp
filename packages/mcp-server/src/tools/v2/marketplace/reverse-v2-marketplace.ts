@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   resource: 'v2.marketplace',
   operation: 'write',
   tags: [],
+  httpMethod: 'post',
+  httpPath: '/api/v2/marketplace/reverse',
+  operationId: 'post_app_api_v2_marketplace_marketplaceapi_reverse',
 };
 
 export const tool: Tool = {
