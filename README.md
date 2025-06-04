@@ -26,11 +26,7 @@ const client = new Haye({
   apiKey: process.env['HAYE_API_KEY'], // This is the default and can be omitted
 });
 
-async function main() {
-  const response = await client.v2.cards.addTransactionAmount('REPLACE_ME', { amount: 1 });
-}
-
-main();
+const response = await client.v2.cards.addTransactionAmount('REPLACE_ME', { amount: 1 });
 ```
 
 ### Request & Response types
@@ -45,15 +41,11 @@ const client = new Haye({
   apiKey: process.env['HAYE_API_KEY'], // This is the default and can be omitted
 });
 
-async function main() {
-  const params: Haye.V2.CardAddTransactionAmountParams = { amount: 1 };
-  const response: Haye.V2.CardAddTransactionAmountResponse = await client.v2.cards.addTransactionAmount(
-    'REPLACE_ME',
-    params,
-  );
-}
-
-main();
+const params: Haye.V2.CardAddTransactionAmountParams = { amount: 1 };
+const response: Haye.V2.CardAddTransactionAmountResponse = await client.v2.cards.addTransactionAmount(
+  'REPLACE_ME',
+  params,
+);
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -66,21 +58,17 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-async function main() {
-  const response = await client.v2.cards
-    .addTransactionAmount('REPLACE_ME', { amount: 1 })
-    .catch(async (err) => {
-      if (err instanceof Haye.APIError) {
-        console.log(err.status); // 400
-        console.log(err.name); // BadRequestError
-        console.log(err.headers); // {server: 'nginx', ...}
-      } else {
-        throw err;
-      }
-    });
-}
-
-main();
+const response = await client.v2.cards
+  .addTransactionAmount('REPLACE_ME', { amount: 1 })
+  .catch(async (err) => {
+    if (err instanceof Haye.APIError) {
+      console.log(err.status); // 400
+      console.log(err.name); // BadRequestError
+      console.log(err.headers); // {server: 'nginx', ...}
+    } else {
+      throw err;
+    }
+  });
 ```
 
 Error codes are as follows:
