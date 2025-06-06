@@ -1,7 +1,8 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Haye from 'boomerangme-api';
-import { Tool } from '@modelcontextprotocol/sdk/types.js';
+import { Metadata, Endpoint, HandlerFunction } from './types';
+
+export { Metadata, Endpoint, HandlerFunction };
 
 import list_operations_v2 from './v2/list-operations-v2';
 import send_sms_v2 from './v2/send-sms-v2';
@@ -55,24 +56,6 @@ import retrieve_v2_templates from './v2/templates/retrieve-v2-templates';
 import list_v2_templates from './v2/templates/list-v2-templates';
 import create_templates_v2_reward_tiers from './v2/templates/reward-tiers/create-templates-v2-reward-tiers';
 import delete_templates_v2_reward_tiers from './v2/templates/reward-tiers/delete-templates-v2-reward-tiers';
-
-export type HandlerFunction = (client: Haye, args: Record<string, unknown> | undefined) => Promise<any>;
-
-export type Metadata = {
-  resource: string;
-  operation: 'read' | 'write';
-  tags: string[];
-
-  httpMethod?: string;
-  httpPath?: string;
-  operationId?: string;
-};
-
-export type Endpoint = {
-  metadata: Metadata;
-  tool: Tool;
-  handler: HandlerFunction;
-};
 
 export const endpoints: Endpoint[] = [];
 
