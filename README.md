@@ -1,6 +1,6 @@
 # Haye TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/boomerangme-api.svg)](https://npmjs.org/package/boomerangme-api) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/boomerangme-api)
+[![NPM version](<https://img.shields.io/npm/v/boomerangme-api.svg?label=npm%20(stable)>)](https://npmjs.org/package/boomerangme-api) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/boomerangme-api)
 
 This library provides convenient access to the Haye REST API from server-side TypeScript or JavaScript.
 
