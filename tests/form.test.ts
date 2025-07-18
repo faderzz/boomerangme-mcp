@@ -1,5 +1,5 @@
-import { multipartFormRequestOptions, createForm } from 'haye/internal/uploads';
-import { toFile } from 'haye/core/uploads';
+import { multipartFormRequestOptions, createForm } from 'boomerangme-api/internal/uploads';
+import { toFile } from 'boomerangme-api/core/uploads';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {

@@ -1,6 +1,6 @@
 # Haye TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/haye.svg)](https://npmjs.org/package/haye) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/haye)
+[![NPM version](<https://img.shields.io/npm/v/boomerangme-api.svg?label=npm%20(stable)>)](https://npmjs.org/package/boomerangme-api) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/boomerangme-api)
 
 This library provides convenient access to the Haye REST API from server-side TypeScript or JavaScript.
 
@@ -11,11 +11,8 @@ It is generated with [Stainless](https://www.stainless.com/).
 ## Installation
 
 ```sh
-npm install git+ssh://git@github.com:stainless-sdks/haye-typescript.git
+npm install boomerangme-api
 ```
-
-> [!NOTE]
-> Once this package is [published to npm](https://app.stainless.com/docs/guides/publish), this will become: `npm install haye`
 
 ## Usage
 
@@ -23,17 +20,13 @@ The full API of this library can be found in [api.md](api.md).
 
 <!-- prettier-ignore -->
 ```js
-import Haye from 'haye';
+import Haye from 'boomerangme-api';
 
 const client = new Haye({
   apiKey: process.env['HAYE_API_KEY'], // This is the default and can be omitted
 });
 
-async function main() {
-  const response = await client.v2.cards.addTransactionAmount('REPLACE_ME', { amount: 1 });
-}
-
-main();
+const response = await client.v2.cards.addTransactionAmount('REPLACE_ME', { amount: 1 });
 ```
 
 ### Request & Response types
@@ -42,21 +35,17 @@ This library includes TypeScript definitions for all request params and response
 
 <!-- prettier-ignore -->
 ```ts
-import Haye from 'haye';
+import Haye from 'boomerangme-api';
 
 const client = new Haye({
   apiKey: process.env['HAYE_API_KEY'], // This is the default and can be omitted
 });
 
-async function main() {
-  const params: Haye.V2.CardAddTransactionAmountParams = { amount: 1 };
-  const response: Haye.V2.CardAddTransactionAmountResponse = await client.v2.cards.addTransactionAmount(
-    'REPLACE_ME',
-    params,
-  );
-}
-
-main();
+const params: Haye.V2.CardAddTransactionAmountParams = { amount: 1 };
+const response: Haye.V2.CardAddTransactionAmountResponse = await client.v2.cards.addTransactionAmount(
+  'REPLACE_ME',
+  params,
+);
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -69,21 +58,17 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-async function main() {
-  const response = await client.v2.cards
-    .addTransactionAmount('REPLACE_ME', { amount: 1 })
-    .catch(async (err) => {
-      if (err instanceof Haye.APIError) {
-        console.log(err.status); // 400
-        console.log(err.name); // BadRequestError
-        console.log(err.headers); // {server: 'nginx', ...}
-      } else {
-        throw err;
-      }
-    });
-}
-
-main();
+const response = await client.v2.cards
+  .addTransactionAmount('REPLACE_ME', { amount: 1 })
+  .catch(async (err) => {
+    if (err instanceof Haye.APIError) {
+      console.log(err.status); // 400
+      console.log(err.name); // BadRequestError
+      console.log(err.headers); // {server: 'nginx', ...}
+    } else {
+      throw err;
+    }
+  });
 ```
 
 Error codes are as follows:
@@ -180,7 +165,7 @@ The log level can be configured in two ways:
 2. Using the `logLevel` client option (overrides the environment variable if set)
 
 ```ts
-import Haye from 'haye';
+import Haye from 'boomerangme-api';
 
 const client = new Haye({
   logLevel: 'debug', // Show all log messages
@@ -208,7 +193,7 @@ When providing a custom logger, the `logLevel` option still controls which messa
 below the configured level will not be sent to your logger.
 
 ```ts
-import Haye from 'haye';
+import Haye from 'boomerangme-api';
 import pino from 'pino';
 
 const logger = pino();
@@ -243,9 +228,8 @@ parameter. This library doesn't validate at runtime that the request matches the
 send will be sent as-is.
 
 ```ts
-client.foo.create({
-  foo: 'my_param',
-  bar: 12,
+client.v2.cards.addTransactionAmount({
+  // ...
   // @ts-expect-error baz is not yet public
   baz: 'undocumented option',
 });
@@ -278,7 +262,7 @@ globalThis.fetch = fetch;
 Or pass it to the client:
 
 ```ts
-import Haye from 'haye';
+import Haye from 'boomerangme-api';
 import fetch from 'my-fetch';
 
 const client = new Haye({ fetch });
@@ -289,7 +273,7 @@ const client = new Haye({ fetch });
 If you want to set custom `fetch` options without overriding the `fetch` function, you can provide a `fetchOptions` object when instantiating the client or making a request. (Request-specific options override client options.)
 
 ```ts
-import Haye from 'haye';
+import Haye from 'boomerangme-api';
 
 const client = new Haye({
   fetchOptions: {
@@ -306,7 +290,7 @@ options to requests:
 <img src="https://raw.githubusercontent.com/stainless-api/sdk-assets/refs/heads/main/node.svg" align="top" width="18" height="21"> **Node** <sup>[[docs](https://github.com/nodejs/undici/blob/main/docs/docs/api/ProxyAgent.md#example---proxyagent-with-fetch)]</sup>
 
 ```ts
-import Haye from 'haye';
+import Haye from 'boomerangme-api';
 import * as undici from 'undici';
 
 const proxyAgent = new undici.ProxyAgent('http://localhost:8888');
@@ -320,7 +304,7 @@ const client = new Haye({
 <img src="https://raw.githubusercontent.com/stainless-api/sdk-assets/refs/heads/main/bun.svg" align="top" width="18" height="21"> **Bun** <sup>[[docs](https://bun.sh/guides/http/proxy)]</sup>
 
 ```ts
-import Haye from 'haye';
+import Haye from 'boomerangme-api';
 
 const client = new Haye({
   fetchOptions: {
@@ -332,7 +316,7 @@ const client = new Haye({
 <img src="https://raw.githubusercontent.com/stainless-api/sdk-assets/refs/heads/main/deno.svg" align="top" width="18" height="21"> **Deno** <sup>[[docs](https://docs.deno.com/api/deno/~/Deno.createHttpClient)]</sup>
 
 ```ts
-import Haye from 'npm:haye';
+import Haye from 'npm:boomerangme-api';
 
 const httpClient = Deno.createHttpClient({ proxy: { url: 'http://localhost:8888' } });
 const client = new Haye({
@@ -354,7 +338,7 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/stainless-sdks/haye-typescript/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/faderzz/boomerangme-mcp/issues) with questions, bugs, or suggestions.
 
 ## Requirements
 
